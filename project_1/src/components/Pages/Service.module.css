@@ -1,0 +1,134 @@
+.container1{
+    width: 100%;
+    height: 150vh;
+    background: var(--background);
+    padding-top: 12%;
+    margin-top: -16%;
+
+}
+.container{
+    display: flex;
+    width: 90%;
+    height: 100vh;
+    margin-left: 5%;
+    margin-top: 5%;
+    flex-direction: column;
+}
+
+
+ .h1{
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+}
+.h1::first-letter{
+    font-size: 60px;
+    color: orangered;
+}
+.h1::after{
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 2px;
+    background: orangered;
+    width: 5%;
+    height: 3px;
+}
+.h1::before{
+    content: "";
+    position: absolute;
+    top: 85px;
+    left: 2px;
+    background: orangered;
+    width: 3%;
+    height: 3px;
+}
+
+.service-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;  
+    flex-wrap: wrap; 
+    margin-bottom: 5%;
+    
+}
+
+.service1, .service2, .service3, .service4, .service5, .service6{
+    width: 30%;
+    height: 250px;
+    margin: 5px;
+    box-shadow: 2px 2px 1em #555;
+    padding: 10px;
+    border-radius: 5px;
+   
+    
+
+}
+.service-info >div:hover{
+ height: 260px;
+ transition: .5s;
+ background: rgba(0, 0, 0, .2);
+}
+.h33{
+    font-size: 30px;
+    font-weight: 900;
+    color: orangered;
+}
+
+
+@media All and (max-width: 600px) {
+    .container1{
+        height: 300vh;
+        margin-top: -20%;
+    }
+    .container{
+        margin-top: 10%;
+    }
+
+    .service1, .service2, .service3, .service4, .service5, .service6{
+        width: 80%;
+        height: 250px;
+        margin-bottom: 5%;
+        box-shadow: 2px 2px 1em #555;
+        padding: 10px;
+        border-radius: 5px;
+        
+    
+    }
+    
+}
+
+@media All and (max-width: 280px) {
+    .container1{
+        margin-top: -30%;
+    }
+    .container{
+        margin-top: 15%;
+    }
+   
+}
+
+@media All and (min-width: 600px) {
+    .container1{
+        height: 110vh;
+    }
+    .service1, .service2, .service3, .service4, .service5, .service6{
+        width: 45%;
+        height: 250px;
+        margin-bottom: 5%;
+        box-shadow: 2px 2px 1em #555;
+        padding: 10px;
+        border-radius: 5px;
+        
+    
+    }
+}
+
+@media All and (min-width: 912px) {
+    .container1{
+        height: 200vh;
+    }
+    
+   
+}

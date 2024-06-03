@@ -1,0 +1,28 @@
+body{
+  background-color: var(--background);
+}
+:root{
+  --color-white: white;
+  --color-dark: black;
+  --span-color: #444;
+
+  --background: white;
+  --foreground: #0b0c21;
+  transition: .5s;
+
+
+
+}
+
+[data-theme= "dark"] {
+  --color-white: black;
+  --color-dark: white;
+  --span-color: #444;
+  transition: .5s;
+
+  --background: #0b0c21;
+  --foreground: white;
+}
+
+
+

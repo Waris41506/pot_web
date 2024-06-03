@@ -1,0 +1,176 @@
+/* :root{
+    --color-white: white;
+    --color-dark: black;
+    --span-color: #444;
+
+    --background: white;
+    --foreground: #0b0c21;
+
+
+
+}
+
+[data-theme= "dark"] {
+    --color-white: black;
+    --color-dark: white;
+    --span-color: #444;
+
+    --background: #0b0c21;
+    --foreground: white;
+} */
+
+nav{
+    background: var(--background);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2%;
+    border-radius: 10px;
+    position: sticky;
+    z-index: 100;
+    top: 2%;
+    box-shadow: 2px 2px 1em #555;
+    margin-bottom: 10px;
+  
+}
+.color{
+    background-color: red;
+}
+.dark-mode{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-dark);
+}
+.nav-link{
+    display: block;
+}
+nav h1 {
+    color: var(--color-dark);
+}
+#link-h1{
+    font-size: 25px;
+    color: var(--color-dark);
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#link-h1::after{
+    content: "";
+    width: 50px;
+    height: 20px;
+    background: orangered;
+    position: absolute;
+    top: -5px; 
+    right: -5px;
+    z-index: -1;
+}
+
+#link-h1::before{
+    content: "";
+    width: 50px;
+    height: 20px;
+    background: orangered;
+    position: absolute;
+    bottom: -5px; 
+    left: -5px;
+    z-index: -1;
+}
+
+.link{
+    margin-right: 20px;
+    color: var(--color-dark);
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+}
+.link::after{
+    content: "";
+    width: 0;
+    height: 4px;
+    display: block;
+    background: orangered;
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    transition: .5s;
+    
+}
+.link:hover::after{
+    width: 100%;
+}
+.menu{
+    display: none;
+}
+
+.close{
+    background: var(--background);
+}
+.close-c{
+    border: 2px solid var(--foreground);
+    background-color: #666;
+    border-radius: 5px;
+}
+
+@media All and (max-width: 800px) {
+    .nav-link{
+        display: none;
+        
+    }
+    .menu{
+        display: block;
+        cursor: pointer;
+        transition: .3s;
+    }
+    nav{
+        position: relative;
+        position: sticky;
+    }
+    .show-nav-link{
+        display: block;
+        position: absolute;
+        top: 6rem;
+        background: var(--background);
+        width: 100%;
+        z-index: 100;
+        padding-top: 5%;
+        box-shadow: 2px 2px 1em #555;
+        animation: slidedown .5s forwards;
+    }
+    .show-nav-link .link{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 10%;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        max-width: 30%;
+
+    
+    }
+    .link:hover::after{
+        width: 100%;
+    }
+
+    @keyframes slidedown {
+        0%{
+            transform: translateY(-45px);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+}
+@media All and (max-width: 460px) {
+    .show-nav-link .link{
+        max-width: 70%;
+    }
+
+}
+
